@@ -1,0 +1,134 @@
+body {
+    font: 20px Montserrat, sans-serif;
+    line-height: 1.8;
+    color: #f5f6f7;
+  }
+  p {font-size: 16px;}
+  .margin {margin-bottom: 45px;}
+  .bg-1 { 
+    background-color: #91a1ba; /* Greyish blue */
+    color: #ffffff;
+  }
+  .bg-2 { 
+    background-color: #474e5d; /* Dark Blue */
+    color: #ffffff;
+  }
+  .bg-3 { 
+    background-color: #ffffff; /* White */
+    color: #555555;
+  }
+  .bg-4 { 
+    background-color: #2f2f2f; /* Black Gray */
+    color: #fff;
+  }
+  .container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  .navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    letter-spacing: 5px;
+  }
+  .navbar-nav  li a:hover {
+    color: #1abc9c !important;
+  }
+
+  .small-img {
+    margin: auto;    
+    display: block;
+  }
+
+  .card-price {
+	display: inline-block;
+  
+  width: auto;
+	height: 38px;
+	
+	background-color: #72dd22;
+	-webkit-border-radius: 3px 6px 6px 3px;
+	-moz-border-radius: 3px 6px 6px 3px;
+	border-radius: 3px 6px 6px 3px;
+	
+	border-left: 1px solid #6ab070;
+
+	/* This makes room for the triangle */
+	margin-left: 19px;
+	
+	position: relative;
+	
+	color: white;
+	font-weight: 300;
+	font-size: 22px;
+	line-height: 38px;
+
+	padding: 0px 14px 0px 14px;
+}
+
+/* Makes the triangle */
+.card-price:before {
+	content: "";
+	position: absolute;
+	display: block;
+	left: -19px;
+	width: 0;
+	height: 0;
+	border-top: 19px solid transparent;
+	border-bottom: 19px solid transparent;
+	border-right: 19px solid #6ab070;
+}
+
+/* Makes the circle */
+.card-price:after {
+	content: "";
+	background-color: white;
+	border-radius: 50%;
+	width: 4px;
+	height: 4px;
+	display: block;
+	position: absolute;
+	left: -9px;
+	top: 17px;
+}
+
+.single-product input{
+    width: 50px;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 20px;
+    margin-right: 10px;
+    border: 1px solid #ff523b;
+}
+
+input:focus{
+    outline: none;
+}
+
+a{
+    text-decoration: none;
+    color: #555555;
+}
+
+.btn{
+    display: inline-block;
+    background: #0b0bae;
+    color: #fff;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+    transition: background 0.5s;
+}
+
+.btn:hover{
+    background: #ceced4;
+}
+
+.cart-img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
