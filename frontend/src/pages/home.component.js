@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/home.css";
 import singleVest from "../assets/singlevest.jpg";
-import vest from "../assets/vest.png";
+//import vest from "../assets/vest.png";
 import sizes from "../assets/3sizes.jpg";
 import pic1 from "../assets/pic1.jpg";
 import pic2 from "../assets/pic2.jpg";
@@ -9,26 +9,6 @@ import pic2 from "../assets/pic2.jpg";
 const Home = () => {
     return (
         <div>
-            <nav className="navbar navbar-default">
-                <div className="container">
-                    <div className="navbar-header">
-                        <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                            <span className="icon-bar"></span>
-                            <span className="icon-bar"></span>
-                            <span className="icon-bar"></span>
-                        </button>
-                        <a className="navbar-brand" href="#">25mph Vest</a>
-                    </div>
-                    <div className="collapse navbar-collapse" id="myNavbar">
-                        <ul className="nav navbar-nav navbar-right">
-                            <li><a href="#contact">CONTACT</a></li>
-                            <li><a href="./shoppage.html">SHOP</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav >
-
-
 
             <div className="container-fluid bg-1 text-center">
                 <h1 className="margin" style={{fontSize:"2.5em"}}>Drivers will slow down!</h1>
@@ -45,10 +25,7 @@ const Home = () => {
             </div>
 
 
-            <div className="container-fluid bg-3 text-center" id="buy">    \
-                <span className="glyphicon glyphicon-shopping-cart"></span> Buy
-                <h4 className="margin">Email to purchase a 25mph vest directly from us.</h4>
-
+            <div className="container-fluid bg-3 text-center" id="buy">    
                 <div className="row">
                     <div className="col-sm-6">
                         <p className="card-price">$19.99 for 1</p>
@@ -65,7 +42,7 @@ const Home = () => {
                 <h3>Free shipping within continental United States</h3>
 
                 <div className="container-fluid">
-                    <img src={sizes} className="img-responsive margin" style={{display:"inline"}} alt="Vest" width="400" />
+                    <img src={sizes} className="img-responsive margin" style={{display:"inline"}} alt="Vest" width="50%" />
                 </div>
 
                 <div className="margin">
