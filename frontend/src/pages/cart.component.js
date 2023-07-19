@@ -19,13 +19,22 @@ const Cart = () => {
   return (
     <div>
       
-      cart page
+      <div className="container-fluid bg-1 text-center">
+      <table style={{ color: "black" }}>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Size</th>
+                    <th>Quantity</th>
+                    <th>Price</th> 
+                </tr>
+            </table>
       {console.log(sizes)}
       {sizes[0] > 0 && <CartProductItem size={'s'} qty={sizes[0]}/>}
       {sizes[1] > 0 && <CartProductItem size={'m'} qty={sizes[1]}/>}
       {sizes[2] > 0 && <CartProductItem size={'l'} qty={sizes[2]}/>}
 
       {(sizes.reduce((a, b) => a + b, 0) * 19.99 ).toFixed(2)}
+      </div>
 
     </div>
   )

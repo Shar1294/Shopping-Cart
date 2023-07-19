@@ -14,10 +14,10 @@ const Navbar = () => {
   }
 
   return (
-    <nav className="navbar">
+    <nav className="navbar navbar-default">
       <div className="container2 parent-div">
         <div className="logo">
-        <NavLink to="/">25mph Vest</NavLink>
+          <h3>25mph Vest</h3>
         </div>
         <div className="menu-icon" onClick={handleShowNavbar}>
         <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1"
@@ -28,7 +28,7 @@ const Navbar = () => {
         <div class="collapse navbar-collapse nav navbar-nav navbar-right" id="myNavbar"/>
           <ul>
             <li>
-              <NavLink to="#contact">CONTACT</NavLink>
+              <NavLink to="/">Home</NavLink>
             </li>
       
             <li>

@@ -31,7 +31,7 @@ const Shop = () => {
     }
 
     return (
-        <div>
+        <div className="container-fluid bg-1 text-center">
             <div>
                 <link rel="icon" type="image/x-icon" href="favicon.ico"></link>
                 <link rel="mask-icon" type="image/x-icon" href="favicon.ico" />
@@ -130,7 +130,7 @@ const Shop = () => {
                         </form>
                     </div>
                 </div>
-            </div>*/
+            </div>
 
 
             <div id="contact" classNameName="contact container-fluid bg-2 text-center">

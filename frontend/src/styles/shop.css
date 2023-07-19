@@ -104,7 +104,7 @@
 }
 
 form .button-buy-now{
-    background: #553ff0;
+    background: #010105;
     color: #fff;
     font-size: 17px;
     width: 100%;
@@ -134,5 +134,17 @@ form .button-buy-now{
 }
 
 .btn active{
-    background: #553ff0;
+    background: #acaab6;
 }
+
+.bg-2 { 
+    background-color: #474e5d; /* Dark Blue */
+    color: #ffffff;
+  }
+
+  .margin {margin-bottom: 45px;}
+
+  .container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
