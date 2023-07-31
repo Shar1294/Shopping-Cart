@@ -22,14 +22,10 @@ body {
 .navbar {
   height: 60px;
   background-color: #ffffff;
-
   position: fixed !important;
   top: 0;
   width: 100%;
   z-index: 5;
-}
-
-.logo {
 }
 
 .menu-icon {
@@ -49,15 +45,15 @@ body {
 }
 
 .nav-elements ul a {
-  font-size: 16px;
-  font-weight: 400;
+  font-size: 25px;
+  font-weight: bold;
   color: #2f234f;
   text-decoration: none;
 }
 
 .nav-elements ul a.active {
-  color: #6148f3;
-  font-weight: 500;
+  color: #100f12;
+  font-weight: bold;
   position: relative;
 }
 

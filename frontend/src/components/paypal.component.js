@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-const Paypal = ({ total }) => {
+const Paypal = ({ total, onPaymentSuccess  }) => {
   const [scriptLoaded, setScriptLoaded] = useState(false);
 
   useEffect(() => {
@@ -39,6 +39,7 @@ const Paypal = ({ total }) => {
           onApprove: function (data, actions) {
             return actions.order.capture().then(function (details) {
               alert('Transaction completed by ' + details.payer.name.given_name + '!');
+              onPaymentSuccess();
             });
           },
         })

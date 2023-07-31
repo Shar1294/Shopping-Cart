@@ -9,4 +9,4 @@ const setArrayInLocalStorage = (key, array) => {
     return storedArray ? JSON.parse(storedArray) : [0,0,0];
   };
 
-  export {setArrayInLocalStorage, getArrayFromLocalStorage };
+  export {setArrayInLocalStorage, getArrayFromLocalStorage};

@@ -30,8 +30,8 @@ const ShippingAddress = ({ onSubmit }) => {
     return (
         <div className="parent-div">
             <form onSubmit={handleSubmit}>
-                <div className="row">
-                    <div className="col-md-6">
+                <div className="row style">
+                    <div className="col-md-6 style">
                         <div className="form-group">
                             <label htmlFor="firstName">First Name:</label>
                             <input
@@ -41,7 +41,7 @@ const ShippingAddress = ({ onSubmit }) => {
                                 name="firstName"
                                 value={formData.firstName}
                                 onChange={handleChange}
-                            />
+                            /> <br></br>
                         </div>
                         <div className="form-group">
                             <label htmlFor="lastName">Last Name:</label>
@@ -52,7 +52,7 @@ const ShippingAddress = ({ onSubmit }) => {
                                 name="lastName"
                                 value={formData.lastName}
                                 onChange={handleChange}
-                            />
+                            /><br></br>
                         </div>
                         <div className="form-group">
                             <label htmlFor="phoneNumber">Phone Number:</label>
@@ -64,7 +64,7 @@ const ShippingAddress = ({ onSubmit }) => {
                                 value={formData.phoneNumber}
                                 onChange={handleChange}
                                 style={{ width: "100%" }}
-                            />
+                            /><br></br>
                         </div>
                         <div className="form-group">
                             <label htmlFor="email">Email Address:</label>
@@ -75,7 +75,7 @@ const ShippingAddress = ({ onSubmit }) => {
                                 name="email"
                                 value={formData.email}
                                 onChange={handleChange}
-                            />
+                            /><br></br>
                         </div>
                     </div>
                     <div className="col-md-6">
@@ -88,7 +88,7 @@ const ShippingAddress = ({ onSubmit }) => {
                                 name="addressLine1"
                                 value={formData.addressLine1}
                                 onChange={handleChange}
-                            />
+                            /><br></br>
                         </div>
                         <div className="form-group">
                             <label htmlFor="addressLine2">Address Line 2 (Unit):</label>
@@ -99,7 +99,7 @@ const ShippingAddress = ({ onSubmit }) => {
                                 name="addressLine2"
                                 value={formData.addressLine2}
                                 onChange={handleChange}
-                            />
+                            /><br></br>
                         </div>
                         <div className="form-group">
                             <label htmlFor="city">City:</label>
@@ -110,7 +110,7 @@ const ShippingAddress = ({ onSubmit }) => {
                                 name="city"
                                 value={formData.city}
                                 onChange={handleChange}
-                            />
+                            /><br></br>
                         </div>
                         <div className="form-group">
                             <label htmlFor="state">State:</label>
@@ -121,7 +121,7 @@ const ShippingAddress = ({ onSubmit }) => {
                                 name="state"
                                 value={formData.state}
                                 onChange={handleChange}
-                            />
+                            /><br></br>
                         </div>
                         <div className="form-group">
                             <label htmlFor="pinCode">Pin Code:</label>
@@ -133,7 +133,7 @@ const ShippingAddress = ({ onSubmit }) => {
                                 value={formData.pinCode}
                                 onChange={handleChange}
                                 style={{ width: "100%" }}
-                            />
+                            /><br></br>
                         </div>
                     </div>
                 </div>

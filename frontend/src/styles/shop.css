@@ -1,100 +1,104 @@
-.contains{
+.contains {
     width: 100%;
     min-height: 100vh;
-    background: #d0eaff;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.product{
+.product {
     width: 90%;
     max-width: 750px;
     display: flex;
 }
 
-.gallery{
-    flex-basis: 47%;
-    background: #241e20;
+.gallery {
+    background: #f2eef0;
     box-shadow: -10px 5px 10px 10px rgba(0, 0, 0, 0.1);
     position: relative;
 }
 
-.gallery img{
+.gallery img {
     width: 100%;
     display: block;
-    padding-top: 100px;
 }
 
-.details{
-    flex-basis: 53%;
+.details {
     background: #fff;
-    padding: 40px;
-    padding-left: 60px;
+    width: 100%;
     box-shadow: -10px 5px 10px 10px rgba(0, 0, 0, 0.1);
     font-size: 13px;
     font-weight: 500;
     color: #777;
 }
 
-.details h1{
+.details h1 {
     color: #333;
     font-size: 35px;
 }
 
-.details h2{
+.details h2 {
     color: #555;
     font-size: 30px;
     font-weight: 600;
 }
 
-.details p{
+.details p {
     color: #555;
-    margin-bottom: 20px;
-    font-size: 12px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    padding-top: 5%;
 }
 
-.details form{
-    font-size: 15px;
+.details form {
+    font-size: 20px;
     font-weight: 400;
 }
 
-.size-select{
+.size-select {
     display: flex;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 10px;
 }
 
-.size-select p{
-    width: 70px;
+.size-select p {
+    padding-top: 2%;
+    width: 50%;
+    font-size: 20px;
+    font-weight: bold;
+    color: #2f2f2f;
 }
 
-.size-select input:checked + span{
+.size-select input:checked+span {
     color: blue;
     font-weight: 600;
 }
 
-.size-select input{
+.size-select input {
     display: none;
 }
 
-.size-select span{
+.size-select span {
     padding: 5px;
     margin-right: 10px;
     cursor: pointer;
 }
 
-.quantity-select{
+.quantity-select {
     display: flex;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
-.quantity-select p{
-    width: 75px;
+.quantity-select p {
+    padding-top: 2%;
+    width: 50%;
+    font-size: 20px;
+    font-weight: bold;
+    color: #2f2f2f;
 }
 
-.quantity-select input{
+.quantity-select input {
     background: #eee;
     border: 0;
     outline: 0;
@@ -103,11 +107,11 @@
     border-radius: 12px;
 }
 
-form .button-buy-now{
-    background: #010105;
-    color: #fff;
+form .button-buy-now {
+    background: #91a1ba;
+    color: black;
     font-size: 17px;
-    width: 100%;
+    width: 50%;
     padding: 10px;
     border-radius: 30px;
     border: 0;
@@ -116,14 +120,18 @@ form .button-buy-now{
     box-shadow: 0 10px 10px rgba(85, 63, 240, 0.25);
     cursor: pointer;
 }
-
-.controls{
+.button-buy-now p {
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+}
+.controls {
     position: absolute;
     bottom: 40px;
     right: 20px;
 }
 
-.btn-2{
+.btn-2 {
     display: block;
     width: 10px;
     height: 10px;
@@ -133,18 +141,46 @@ form .button-buy-now{
     cursor: pointer;
 }
 
-.btn active{
+.btn active {
     background: #acaab6;
 }
 
-.bg-2 { 
-    background-color: #474e5d; /* Dark Blue */
+.margin {
+    margin-bottom: 45px;
+}
+
+.bg-1 {
+    background-color: #91a1ba;
+    /* Greyish blue */
     color: #ffffff;
-  }
+}
 
-  .margin {margin-bottom: 45px;}
+.bg-2 {
+    background-color: #474e5d;
+    /* Dark Blue */
+    color: #ffffff;
+}
 
-  .container-fluid {
+.bg-3 {
+    background-color: #ffffff;
+    /* White */
+    color: #555555;
+}
+
+.bg-4 {
+    background-color: #2f2f2f;
+    /* Black Gray */
+    color: #fff;
+}
+
+.container-fluid {
     padding-top: 70px;
     padding-bottom: 70px;
-  }
+}
+
+.price {
+    padding-top: 2%;
+    font-size: large;
+    font-style: bold;
+    color: #2f2f2f;
+}

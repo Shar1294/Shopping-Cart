@@ -11,6 +11,7 @@ import ShippingAddress from "../components/shipping-address.component";
 import "../styles/global.css"
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import emailjs from 'emailjs-com';
 //import Grid from '@mui/material/Grid';
 //import Typography from '@mui/material/Typography';
 //import TextField from '@mui/material/TextField';
@@ -24,6 +25,8 @@ const Cart = () => {
 
   const [submit, setSubmit] = useState(false);
 
+  const [formData, setFormData] = useState({});
+
   useEffect(() => {
     setTotal(calculateTotal(sizes))
   }, [sizes]);
@@ -36,14 +39,16 @@ const Cart = () => {
 
   const handleFormSubmit = (formData) => {
 
-
     const emptyField = checkFormValidity(formData);
 
     if (emptyField) {
       toast.error(`Please fill in the ${emptyField} field.`);
       setSubmit(false);
     } else {
+      toast.success(`Personal details submitted`);
+      setFormData(formData);
       setSubmit(true);
+      SendConfirmationEmail();
       console.log(formData);
     }
   };
@@ -77,36 +82,91 @@ const Cart = () => {
     return invalidField || null;
   };
 
+  const SendConfirmationEmail = () => {
+    emailjs.send(
+   'service_yjmhotc',
+   'template_db0ufdq',
+   {
+     to_email: formData.email,
+     to_name: formData.name,
+     from_name:"25mph",
+     message:"This is a test message"
+   },
+   'oVic3IbnDSIqlJ-3z'
+ )
+ .then((response) => {
+   console.log('Email sent successfully!', response);
+ })
+ .catch((error) => {
+   console.error('Error sending email:', error);
+ });
+};
+
+const onPaymentSuccess = () =>{
+  toast.success(`Payment successful`);
+}
+
+const removeProduct = (size) => {
+  const updatedSizes = sizes.map((qty, index) =>
+    index === size ? 0 : qty
+  );
+  setArrayInLocalStorage("sizes", updatedSizes);
+  window.location.reload();
+};
 
 
 
   return (
-    <div className="parent-div">
+    <div>
+    <div className="container-fluid bg-1 text-center">
 
-      <div className="container-fluid bg-1 text-center">
+      <div className="tab text-center">
         <table style={{ color: "black" }}>
           <tr>
             <th>Product Name</th>
             <th>Size</th>
             <th>Quantity</th>
-            <th>Price</th>
+            <th>Price</th>            
           </tr>
-        </table>
+
         {console.log(sizes)}
-        {sizes[0] > 0 && <CartProductItem size={'s'} qty={sizes[0]} />}
-        {sizes[1] > 0 && <CartProductItem size={'m'} qty={sizes[1]} />}
-        {sizes[2] > 0 && <CartProductItem size={'l'} qty={sizes[2]} />}
+        {sizes[0] > 0 && <CartProductItem size={'S'} qty={sizes[0]} onRemove={() => removeProduct(0)}/>}
+        {sizes[1] > 0 && <CartProductItem size={'M'} qty={sizes[1]} onRemove={() => removeProduct(1)}/>}
+        {sizes[2] > 0 && <CartProductItem size={'L'} qty={sizes[2]} onRemove={() => removeProduct(2)}/>}
 
+        <td></td>
+        <td></td>
+        <th>Total Price: </th>
+        <th>{total}</th>
 
-        {total}
+        
+
+        
+        </table>
+        
       </div>
       <ShippingAddress onSubmit={handleFormSubmit} />
 
 
 
 
-      {submit && <Paypal total={total} />}
+      {submit && <Paypal total={total} onPaymentSuccess={onPaymentSuccess}/>}
       <ToastContainer />
+      </div>
+
+      <div className="container-fluid bg-2 text-center">
+                <h3 className="margin">Contact US</h3>
+                <p> Email: 25mphvest@gmail.com </p>
+
+                <p> Company Address: 62 Calef Highway #240 Lee NH, USA </p>
+
+            </div>
+
+
+
+            <footer className="container-fluid bg-4 text-center">
+                <p>25mphvest.com by KJCreatives LLC. </p>
+            </footer>
 
     </div>
   )
