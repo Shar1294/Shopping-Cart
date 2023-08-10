@@ -40,7 +40,23 @@ const Paypal = ({ total, onPaymentSuccess  }) => {
             return actions.order.capture().then(function (details) {
               alert('Transaction completed by ' + details.payer.name.given_name + '!');
               onPaymentSuccess();
+              fetch('/api/invoice', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ total, payerName: details.payer.name.given_name }),
+              })
+                .then((response) => response.json())
+                .then((data) => {
+                  if (data.success) {
+                    alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                    onPaymentSuccess();
+                  } else {
+                    alert('Failed to generate invoice. Please contact support.');
+                  }
             });
+          })
           },
         })
         .render('.paypal-button');

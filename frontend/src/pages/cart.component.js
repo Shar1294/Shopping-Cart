@@ -25,7 +25,6 @@ const Cart = () => {
 
   const [submit, setSubmit] = useState(false);
 
-  const [formData, setFormData] = useState({});
 
   useEffect(() => {
     setTotal(calculateTotal(sizes))
@@ -37,58 +36,13 @@ const Cart = () => {
     return (sizes.reduce((a, b) => a + b, 0) * 19.99).toFixed(2)
   }
 
-  const handleFormSubmit = (formData) => {
-
-    const emptyField = checkFormValidity(formData);
-
-    if (emptyField) {
-      toast.error(`Please fill in the ${emptyField} field.`);
-      setSubmit(false);
-    } else {
-      toast.success(`Personal details submitted`);
-      setFormData(formData);
-      setSubmit(true);
-      SendConfirmationEmail();
-      console.log(formData);
-    }
-  };
-
-  const checkFormValidity = (formData) => {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const phoneRegex = /^[0-9]{10}$/;
-    const pincodeRegex = /^[0-9]{6}$/;
-
-    const fieldNames = [
-      "firstName",
-      "lastName",
-      "phoneNumber",
-      "email",
-      "addressLine1",
-      "city",
-      "state",
-      "pinCode"];
-
-    const invalidField = fieldNames.find((field) => {
-      const value = formData[field].trim();
-      if (value === '') return true;
-
-      if (field === 'email' && !emailRegex.test(value)) return true;
-      if (field === 'phoneNumber' && !phoneRegex.test(value)) return true;
-      if (field === 'pinCode' && !pincodeRegex.test(value)) return true;
-
-      return false;
-    });
-
-    return invalidField || null;
-  };
 
   const SendConfirmationEmail = () => {
     emailjs.send(
    'service_yjmhotc',
    'template_db0ufdq',
    {
-     to_email: formData.email,
-     to_name: formData.name,
+     //to_email: formData.email,
      from_name:"25mph",
      message:"This is a test message"
    },
@@ -145,12 +99,10 @@ const removeProduct = (size) => {
         </table>
         
       </div>
-      <ShippingAddress onSubmit={handleFormSubmit} />
+      <div className="paypal-buttons">
+        <Paypal total={total} onPaymentSuccess={onPaymentSuccess} />
+      </div>
 
-
-
-
-      {submit && <Paypal total={total} onPaymentSuccess={onPaymentSuccess}/>}
       <ToastContainer />
       </div>
 

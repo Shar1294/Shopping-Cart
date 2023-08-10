@@ -110,7 +110,7 @@
 form .button-buy-now {
     background: #91a1ba;
     color: black;
-    font-size: 17px;
+    font-size: large;
     width: 50%;
     padding: 10px;
     border-radius: 30px;
@@ -183,4 +183,20 @@ form .button-buy-now {
     font-size: large;
     font-style: bold;
     color: #2f2f2f;
+}
+
+@media (max-width:768px){
+
+.details h1 {
+    font-size: 12px;
+}
+
+.details h2 {
+    font-size: 15px;
+}
+
+.details p {
+    font-size: 10px;
+}
+
 }

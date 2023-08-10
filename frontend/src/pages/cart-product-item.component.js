@@ -13,6 +13,7 @@ const CartProductItem = ({ size, qty, onRemove }) => {
 
         return sizeName;
     }
+    
 
     return (
         <tr style={{ color: "black" }}>
