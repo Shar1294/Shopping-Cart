@@ -6,10 +6,11 @@
   <title>25mph Vest</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-  <link rel="stylesheet" href="styles/home.css">
-  <link rel="stylesheet" href="styles/shop.css">
-  <link rel="stylesheet" href="styles/cart.css">
-  <link rel="stylesheet" href="styles/global.css">
+  <link rel="stylesheet" href="/src/styles/home.css">
+  <link rel="stylesheet" href="/src/styles/shop.css">
+  <link rel="stylesheet" href="/src/styles/cart.css">
+  <link rel="stylesheet" href="/src/styles/global.css">
+  <link rel="stylesheet" href="/src/styles/nav.css">
 </head>
 <body>
   <div id="root"></div>
@@ -19,13 +20,13 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/17.0.2/umd/react-dom.development.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.js"></script>
   <script src="https://unpkg.com/react-router-dom/umd/react-router-dom.min.js"></script>
-  <script type="text/babel" src="homepage.js"></script>
-  <script type="text/babel" src="shop.js"></script>
-  <script type="text/babel" src="cart.js"></script>
-  <script type="text/babel" src="cart-product.js"></script>
-  <script type="text/babel" src="paypal.js"></script>
-  <script type="text/babel" src="shipping-address.js"></script>
-  <script type="text/babel" src="navigation.js"></script>
+  <script type="text/babel" src="/src/pages/home.component.js"></script>
+  <script type="text/babel" src="/src/pages/shop.component.js"></script>
+  <script type="text/babel" src="/src/pages/cart.component.js"></script>
+  <script type="text/babel" src="/src/pages/cart-product-item.component.js"></script>
+  <script type="text/babel" src="/src/components/paypal.component.js"></script>
+  <script type="text/babel" src="/src/components/shipping-address.component.js"></script>
+  <script type="text/babel" src="/src/components/navbar.component.js"></script>
   <script type="text/babel">
     const { BrowserRouter, Switch, Route } = ReactRouterDOM;
 
