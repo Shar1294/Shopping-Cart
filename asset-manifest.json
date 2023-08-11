@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.5cb31177.css",
+    "main.js": "/static/js/main.8602c7a4.js",
+    "static/js/787.cda612ba.chunk.js": "/static/js/787.cda612ba.chunk.js",
+    "static/media/singlevest.jpg": "/static/media/singlevest.921060a6dc0b01f975c6.jpg",
+    "static/media/pic1.jpg": "/static/media/pic1.cfe33e447f228f8b5d2d.jpg",
+    "static/media/pic2.jpg": "/static/media/pic2.70471ce311affb532417.jpg",
+    "static/media/3sizes.jpg": "/static/media/3sizes.8b0c7aec6b2954c55ecd.jpg",
+    "index.html": "/index.html",
+    "main.5cb31177.css.map": "/static/css/main.5cb31177.css.map",
+    "main.8602c7a4.js.map": "/static/js/main.8602c7a4.js.map",
+    "787.cda612ba.chunk.js.map": "/static/js/787.cda612ba.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5cb31177.css",
+    "static/js/main.8602c7a4.js"
+  ]
+}
